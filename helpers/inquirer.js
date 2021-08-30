@@ -49,20 +49,39 @@ const inquirerMenu = async () => {
   return option;
 };
 
-
-const pause = async ()=> {
+const pause = async () => {
   const question = [
     {
-      type : 'input',
-      name: 'enter',
-      message: `Press ${'enter'.green} to continue`,
-
-    }
-  ]
+      type: "input",
+      name: "enter",
+      message: `Press ${"enter".green} to continue`,
+    },
+  ];
   console.log("\n");
-  await inquirer.prompt(question)
-}
+  await inquirer.prompt(question);
+};
+
+const readInput = async (message) => {
+  const question = [
+    {
+      type: "input",
+      name: "desc",
+      message,
+      validate(value) {
+        if (value.length === 0) {
+          return "Please enter a value";
+        }
+        return true;
+      },
+    },
+  ];
+
+  const { desc } = await inquirer.prompt(question);
+  return desc;
+};
+
 module.exports = {
   inquirerMenu,
-  pause
+  pause,
+  readInput,
 };

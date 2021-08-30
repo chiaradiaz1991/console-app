@@ -19,6 +19,7 @@
   "homepage": "https://github.com/chiaradiaz1991/console-app#readme",
   "dependencies": {
     "colors": "^1.4.0",
-    "inquirer": "^8.1.2"
+    "inquirer": "^8.1.2",
+    "uuid": "^8.3.2"
   }
 }

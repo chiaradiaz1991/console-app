@@ -84,11 +84,11 @@ const listTaskDelete = async( tasks = [] ) => {
 
   const choices = tasks.map( (task, i) => {
 
-      const idx = `${i + 1}.`.green;
+      const id = `${i + 1}.`.green;
 
       return {
           value: task.id,
-          name:  `${ idx } ${ task.desc }`
+          name:  `${ id } ${ task.desc }`
       }
   });
 
@@ -128,11 +128,11 @@ const showListChecklist = async( tasks = [] ) => {
 
   const choices = tasks.map( (task, i) => {
 
-      const idx = `${i + 1}.`.green;
+      const id = `${i + 1}.`.green;
 
       return {
           value: task.id,
-          name:  `${ idx } ${ task.desc }`,
+          name:  `${ id } ${ task.desc }`,
           checked: ( task.completedTask ) ? true : false
       }
   });

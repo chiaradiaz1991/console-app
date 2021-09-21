@@ -49,7 +49,7 @@ class Tasks {
 
       const { desc, completedTask } = task;
 
-      const isCompleted = completedTask ? "Completed".green : "Pending".red;
+      const isCompleted = completedTask ? "completed".green : "pending".red;
 
       console.log(`${id} ${desc} :: ${isCompleted}`);
     });
@@ -60,7 +60,7 @@ class Tasks {
     let counter = 0;
     this.listArr.forEach((task) => {
       const { desc, completedTask } = task;
-      const state = completedTask ? "Completed".green : "Pending".red;
+      const state = completedTask ? "completed".green : "pending".red;
       if (completed) {
         // mostrar completadas
         if (completedTask) {
